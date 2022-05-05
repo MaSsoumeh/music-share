@@ -4,6 +4,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
   InputAdornment,
   TextField,
 } from "@mui/material";
@@ -29,7 +30,7 @@ const AddSong = () => {
           <img
             src="/music2.svg"
             alt="song thumbnail"
-            style={{ width: "200px" }}
+            style={{ width: "100px" }}
           />
           <TextField
             variant="standard"
@@ -79,13 +80,16 @@ const AddSong = () => {
           ),
         }}
       />
-
-      <AddCircleTwoToneIcon
-        style={{ cursor: "pointer" }}
+      <IconButton
         onClick={() => {
           setDialog(true);
         }}
-      />
+      >
+        <AddCircleTwoToneIcon
+          sx={{ width: "28px", height: "28px" }}
+          color="secondary"
+        />
+      </IconButton>
     </div>
   );
 };
