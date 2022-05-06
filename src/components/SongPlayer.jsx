@@ -31,6 +31,7 @@ const SongPlayer = () => {
           borderRadius: "35px",
           backgroundColor: "rgba(255,255,255,0.4)",
           backdropFilter: "blur(40px)",
+          margin: "0px !important",
         }}
       >
         <div
