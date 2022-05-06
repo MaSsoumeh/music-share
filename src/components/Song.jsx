@@ -23,7 +23,8 @@ const Song = ({ song }) => {
     >
       <CardMedia
         image={thumbnail}
-        sx={{ width: "160px", height: "140px", objectFit: "cover" }}
+        alt="song thumbnail"
+        sx={{ width: "160px", height: "140px" }}
       />
       <div
         style={{
