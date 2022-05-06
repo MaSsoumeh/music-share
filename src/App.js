@@ -2,13 +2,15 @@ import AddSong from "./components/AddSong";
 import Header from "./components/Header";
 import SongList from "./components/SongList";
 import SongPlayer from "./components/SongPlayer";
-import { Grid, useMediaQuery } from "@mui/material";
+import { Grid, Hidden, useMediaQuery } from "@mui/material";
 function App() {
   const greaterThanMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const greaterThanSm = useMediaQuery((theme) => theme.breakpoints.up("sm"));
   return (
     <>
-      {greaterThanSm && <Header />}
+      <Hidden only="xs">
+        <Header />
+      </Hidden>
       <Grid
         sx={{
           padding: greaterThanSm ? "80px 40px" : "40px 40px",
